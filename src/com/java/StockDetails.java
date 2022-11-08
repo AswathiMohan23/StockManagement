@@ -5,7 +5,41 @@ public class StockDetails {
     private int shares;
     private long sharePrice;
     private long totalValueOfShares;
+    private long totalValueOfSharesTcs;
+    private long totalValueOfSharesWipro;
+    private long totalValueOfSharesBosch;
 
+    public long getTotalValueOfShares() {
+        return totalValueOfShares;
+    }
+
+    public void setTotalValueOfShares(long totalValueOfShares) {
+        this.totalValueOfShares = totalValueOfShares;
+    }
+
+    public long getTotalValueOfSharesTcs() {
+        return totalValueOfSharesTcs;
+    }
+
+    public void setTotalValueOfSharesTcs(long totalValueOfSharesTcs) {
+        this.totalValueOfSharesTcs = totalValueOfSharesTcs;
+    }
+
+    public long getTotalValueOfSharesWipro() {
+        return totalValueOfSharesWipro;
+    }
+
+    public void setTotalValueOfSharesWipro(long totalValueOfSharesWipro) {
+        this.totalValueOfSharesWipro = totalValueOfSharesWipro;
+    }
+
+    public long getTotalValueOfSharesBosch() {
+        return totalValueOfSharesBosch;
+    }
+
+    public void setTotalValueOfSharesBosch(long totalValueOfSharesBosch) {
+        this.totalValueOfSharesBosch = totalValueOfSharesBosch;
+    }
 
     @Override
     public String toString() {
@@ -16,13 +50,8 @@ public class StockDetails {
                 '}';
     }
 
-    public long getTotalValueOfShares() {
-        return totalValueOfShares;
-    }
 
-    public void setTotalValueOfShares(long totalValueOfShares) {
-        this.totalValueOfShares = totalValueOfShares;
-    }
+
 
     public String getStockName() {
         return stockName;
