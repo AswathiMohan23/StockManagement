@@ -12,10 +12,21 @@ public class StockManagement {
     static StockDetails stockDetails=new StockDetails();
     public static void main(String[] args){
         readInput("tcs",tcsList);
+        totalValueOfShares("tcs");
         readInput("wipro",wiproList);
+        totalValueOfShares("wipro");
         readInput("bosch",boschList);
+        totalValueOfShares("bosch");
         System.out.println(tcsList+"\n"+boschList+"\n"+wiproList);
 
+
+
+    }
+
+    public static void totalValueOfShares(String company) {
+        long totalShares= stockDetails.getShares()* stockDetails.getSharePrice();
+        stockDetails.setTotalValueOfShares(totalShares);
+        System.out.println("================>>>>>> TotalValue of shares for "+company+ " = "+stockDetails.getTotalValueOfShares());
 
     }
 
@@ -23,10 +34,14 @@ public class StockManagement {
         Scanner sc=new Scanner(System.in);
         System.out.println("\nEnter the details of : "+company);
         System.out.println("stockName : "+company);
+        stockDetails.setStockName(company);
         list.add(company);
         System.out.println("enter the shares : ");
-        list.add(sc.nextInt());
+        stockDetails.setShares(sc.nextInt());
+        list.add(stockDetails.getShares());
         System.out.println("enter share price : ");
-        list.add(sc.nextInt());
-        }
+        stockDetails.setSharePrice(sc.nextInt());
+        list.add(stockDetails.getSharePrice());
+
+    }
 }

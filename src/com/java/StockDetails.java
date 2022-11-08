@@ -4,6 +4,8 @@ public class StockDetails {
     private String stockName;
     private int shares;
     private long sharePrice;
+    private long totalValueOfShares;
+
 
     @Override
     public String toString() {
@@ -12,6 +14,14 @@ public class StockDetails {
                 ", shares=" + shares +
                 ", sharePrice=" + sharePrice +
                 '}';
+    }
+
+    public long getTotalValueOfShares() {
+        return totalValueOfShares;
+    }
+
+    public void setTotalValueOfShares(long totalValueOfShares) {
+        this.totalValueOfShares = totalValueOfShares;
     }
 
     public String getStockName() {
