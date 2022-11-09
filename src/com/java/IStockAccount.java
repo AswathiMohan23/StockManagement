@@ -6,4 +6,6 @@ public interface IStockAccount{
     void sellShares();
 
     void buyOrSellShares();
+    void saveData(int sharesRemaining,String company);
+    void printReport();
 }

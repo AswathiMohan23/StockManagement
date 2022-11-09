@@ -21,7 +21,7 @@ public class StockManagement {
         readInputBosch();
         creditAndDebit();
         account.buyOrSellShares();
-
+        account.printReport();
 
     }
 

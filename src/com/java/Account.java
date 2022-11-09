@@ -30,6 +30,7 @@ public class Account implements IStockAccount {
         }
 
     }
+
     @Override
     public void buyShares() {
         System.out.println("********************************* Buy share *****************************");
@@ -47,6 +48,17 @@ public class Account implements IStockAccount {
         System.out.println("select the correct choice for selling  :  1 ===> tcs\n2 ===> Wipro\n3 ===> Bosch");
         int option = sc.nextInt();
         stockManagementMethods.sellingAndBuyingDetails(option,choice);
+    }
+    @Override
+    public void saveData(int sharesRemaining,String company) {
+        System.out.println("******************* Saving the data ****************** ");
+        stockManagementMethods.savingData(sharesRemaining,company);
+    }
 
+    @Override
+    public void printReport() {
+        System.out.println("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    STOCK REPORT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("\n--------------------------------------------------- TCS --------------------------------------------------");
+        stockManagementMethods.printingReport();
     }
 }
